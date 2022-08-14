@@ -3,9 +3,9 @@
     --secondary: #C7A338;
 }
 
-.navbar {
+nav.navbar{
     padding: 18px 0;
-    position: fixed;
+    position:fixed;
     width: 100%;
     top: 0;
     z-index: 99999;
@@ -35,6 +35,8 @@
 
 nav.navbar.scrolled {
     padding: 0px 0;
+    background-color: #0b0b0b;
+    opacity: .8;
     transition: all .3s ease-in-out;
 }
 

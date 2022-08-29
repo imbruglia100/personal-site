@@ -1,6 +1,6 @@
 :root{
     --primary: #385CC7;
-    --secondary: #C7A338;
+    --secondary: #f9c322;
 }
 
 nav.navbar{
@@ -9,7 +9,6 @@ nav.navbar{
     width: 100%;
     top: 0;
     z-index: 99999;
-    transition: .32 ease-in-out;
 }
 
 .navbar-logo-nav {

@@ -19,7 +19,7 @@ export const Background = ({children, className}) => {
                 minWidth: 200.00,
                 scale: 1.00,
                 scaleMobile: 1.00,
-                shininess: 0.00,
+                shininess: 15,
                 waveHeight: 26.50,
                 waveSpeed: 0.40,
                 color: 0x15253e

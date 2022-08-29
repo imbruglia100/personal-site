@@ -8,9 +8,9 @@ import {Background} from './Background'
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ['Web developer', 'UI/UX designer', 'React speciallist']
+    const toRotate = ['Front-End Engineer', 'UI/UX Designer', 'React Speciallist']
     const [text, setText] = useState('')
-    const [delta, setDelta] = useState(300 - Math.random() * 100)
+    const [delta, setDelta] = useState(100)
     const period = 2000;
 
     useEffect( () => {
@@ -37,22 +37,24 @@ export const Banner = () => {
         } else if (isDeleting && updatedText === ''){
             setIsDeleting(false)
             setLoopNum(loopNum + 1)
-            setDelta(500)
+            setDelta(200)
         }
     }
     return (
-        <Background className='banner' id='home'>
-            <div className='container'>
+        <div id='home'>
+        <Background className='banner'>
+            <div className='container' >
                 <div className='hero'>
                     <span className='tagline'>Welcome</span>
                     <h1>Hi, I'm a <code style={{ color: '#C7A338'}}className='wrap'>{text}</code></h1>
                     <p>Driven Junior Web Developer looking for an organization where I can thrive in a team-oriented environment, develop a deeper understanding of new techniques and technologies, and deliver projects that exceed client expectations.</p>
-                    <Button sx={{borderColor:'#C7A338', color:'#C7A338'}} variant='outlined' onClick={() => console.log('connect')}>Let's connect <ArrowCircleRightRoundedIcon/></Button>
+                    <Button sx={{ color:'#C7A338', borderColor:'black'}} onClick={() => console.log('connect')}>Let's connect</Button>
                 </div>
                 <div className='header-img'>
                     <img src={avatar} alt='header img' className='avatar'/>
                 </div>
             </div>
         </Background>
+        </div>
     );
 }

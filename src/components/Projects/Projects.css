@@ -1,0 +1,21 @@
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.project span, .project p {
+    opacity: .8;
+}
+
+.project .grid-list {
+    display: flex;
+    padding: 40px 0px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 99vw;
+}
+

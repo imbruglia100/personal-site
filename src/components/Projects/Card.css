@@ -1,0 +1,21 @@
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.card .img-container {
+    max-width: 25vw;
+}
+
+.card .img-container img {
+    max-width: 25vw;
+    border-radius: 10px;
+}
+
+.card p {
+    text-align: center;
+}

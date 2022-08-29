@@ -15,7 +15,7 @@ export const NavBar = () => {
     
     useEffect( () => {
         const onScroll = () => {
-            setScrolled(window.scrollY > 50 ? true : false)
+            setScrolled(window.scrollY > 0 ? true : false)
         }
 
         window.addEventListener("scroll", onScroll);
@@ -37,15 +37,15 @@ export const NavBar = () => {
             
             <Nav className="me-auto">
                 <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-                <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Skills</Nav.Link>
-                <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Projects</Nav.Link>
+                <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
+                <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
             </Nav>
         </div>
           <span className='navbar-text'>
             <div className='social-icons'>
-                <IconButton size="large" href='#Linkedin' color='primary' aria-label='LinkedIn'><LinkedInIcon/></IconButton>
-                <IconButton size="large" href='#Linkedin' color='primary' aria-label='Github'><GitHubIcon/></IconButton>
-                <IconButton size="large" href='#Linkedin' color='primary' aria-label='Instagram'><InstagramIcon/></IconButton>
+                <IconButton size="large" target="_blank" href='https://www.linkedin.com/in/frank-imbruglia-095581164/' color='primary' aria-label='LinkedIn'><LinkedInIcon/></IconButton>
+                <IconButton size="large" target="_blank" href='https://github.com/imbruglia100' color='primary' aria-label='Github'><GitHubIcon/></IconButton>
+                <IconButton size="large" target="_blank" href='https://www.instagram.com/imbruglia50/' color='primary' aria-label='Instagram'><InstagramIcon/></IconButton>
             </div>
             <button className='contact' onClick={() => console.log('connect')}><span>Let's connect</span></button>
           </span>

@@ -15,6 +15,10 @@
     margin: 0 18%;
 }
 
+.container .header-img img {
+     animation: updown 5s linear infinite;
+  }
+
 .hero p {
     max-width: 500px;
     margin: 20px 0;
@@ -23,3 +27,27 @@
 .hero .button {
     color:'#C7A338';
 }
+
+@keyframes updown {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 712px) {
+    .container .header-img img{
+       display: none;
+    } 
+
+    .banner {
+        align-items: center;
+    }
+  }

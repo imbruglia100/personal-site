@@ -26,6 +26,7 @@
 
 .hero p {
     max-width: 500px;
+    font-size: 1.1em;
     margin: 20px 0;
 }
 
@@ -53,7 +54,7 @@
     } 
 
     .hero h1 {
-        height: 75px;
+        height: 80px;
     }
 
     .banner {

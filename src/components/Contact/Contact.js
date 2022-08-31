@@ -1,19 +1,34 @@
 import React, { useState } from 'react'
-import { Button, getInitColorSchemeScript, Grid, TextField } from '@mui/material'
+import { Button, Grid, TextField } from '@mui/material'
 import './Contact.css'
+
 
 export const Contact = () => {
 
     const [email, setEmail] = useState({})
     const [buttonText, setButtonText] = useState('Submit') 
 
+    const encode = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
+      }
+
+      const handleChange = (e) => {
+        setEmail({[e.target.name]: e.target.value})
+      }
+
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        setButtonText('Sending...')
-
-
-
-
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode(email)
+          })
+            .then(() => setButtonText('Sent!'))
+            .catch(error => alert(error));
+          
+          setEmail({})
+          e.preventDefault();
     }
 
     const styles = {
@@ -41,7 +56,8 @@ export const Contact = () => {
                 "& > fieldset": {
                         border: '2px solid #000',
                         margin: '0 5px',
-                        backgroundColor: '#fff'
+                        backgroundColor: '#fff',
+                        zIndex: '-1'
                     },
                 
                 color: '#000'
@@ -56,45 +72,48 @@ export const Contact = () => {
     <section className='contact-section' id='contact'>
         <div className='contact-container'>
             <h1>Let's talk.</h1>
-                <form>
+                <form name="contact" onSubmit={handleSubmit} method="POST">
                     <Grid container flexDirection='column' sx={styles}>
                         <Grid item >
                             <TextField
                             vairant='outlined'
                             label='First Name'
                             margin='normal'
-                            id='firstName'
-                            onChange={e => setEmail({firstName: e.target.value})}
+                            name='firstName'
+                            required
+                            onChange={handleChange}
                             />
                             <TextField 
                             vairant='outlined'
                             label='Last Name'
                             margin='normal'
-                            id='lastName'
-                            onChange={e => setEmail({lastName: e.target.value})}
+                            name='lastName'
+                            onChange={handleChange}
                             />
                         </Grid>
                        
                             <TextField 
                             vairant='outlined'
                             label='Email'
+                            type="email"
                             margin='normal'
-                            id='address'
+                            name='address'
                             fullWidth
-                            onChange={e => setEmail({address: e.target.value})}
+                            required
+                            onChange={handleChange}
                             />
 
                             <TextField 
                             vairant='outlined'
                             label='Message'
                             margin='normal'
-                            id='message'
+                            name='message'
                             multiline
                             fullWidth
-                            onChange={e => setEmail({message: e.target.value})}
+                            onChange={handleChange}
                             />
     
-                        <Button variant='contained' onSubmit={handleSubmit}>{buttonText}</Button>
+                        <Button variant='contained' type="submit" onSubmit={handleSubmit}>{buttonText}</Button>
                     </Grid>
                 </form>
         </div>

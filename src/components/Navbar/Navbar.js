@@ -21,7 +21,7 @@ const buttonStyles = {
   transition: 'all .2s ease-in-out',
   opacity: '0',
   textShadow:'0px 1px 0px #e1e2ed',
-  '@media (max-width: 400px)': {
+  '@media (max-width: 500px)': {
     '&.scroll': {
       opacity: '1',
       color: '#fff',

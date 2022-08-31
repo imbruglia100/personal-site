@@ -22,7 +22,7 @@ export const Background = ({children, className}) => {
                 shininess: 15,
                 waveHeight: 26.50,
                 waveSpeed: 0.40,
-                color: 0x15253e
+                color: 0x000927
         }))
     }
         return () => {

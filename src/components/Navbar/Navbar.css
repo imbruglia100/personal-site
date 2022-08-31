@@ -1,6 +1,6 @@
 :root{
-    --primary: #385CC7;
-    --secondary: #f9c322;
+    --primary: #003DFF;
+    --secondary: #FFC200;
 }
 
 nav.navbar{
@@ -9,6 +9,8 @@ nav.navbar{
     width: 100%;
     top: 0;
     z-index: 99999;
+    transition: all .18s ease-in-out;
+   
 }
 
 .navbar-logo-nav {
@@ -24,19 +26,6 @@ nav.navbar{
     display: flex;
     justify-content: space-evenly;
     padding: 0 10px;
-}
-
-.container .navbar-collapse{
-    display: flex;
-    width: inherit;
-    justify-content: space-between;
-}
-
-nav.navbar.scrolled {
-    padding: 0px 0;
-    background-color: #0b0b0b;
-    opacity: .8;
-    transition: all .3s ease-in-out;
 }
 
 nav.navbar a.navbar-brand img{
@@ -120,6 +109,14 @@ span.navbar-text {
       position: absolute;
   }
 
+  @media (min-width:663px) {
+    nav.navbar.scrolled {
+        padding: 0px 0;
+        background-color: #0b0b0b;
+        opacity: .8;
+        transition: all .3s ease-in-out;
+    }
+  }
   @media (max-width: 712px) {
     .navbar .container{
         flex-direction: column;
@@ -139,8 +136,9 @@ span.navbar-text {
     .contact {
         display: none;
     } 
-    .navbar-nav{
-        margin: 5px 0;
+    nav.navbar{
+        position: absolute;
+        background: none;
     }
 
   }

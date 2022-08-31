@@ -1,9 +1,21 @@
-import ArrowCircleRightRoundedIcon from '@mui/icons-material/ArrowCircleRightRounded'
 import { Button } from '@mui/material';
 import './Banner.css';
 import { useEffect, useState } from 'react';
 import avatar from "../../assets/images/avatar.svg"
 import {Background} from './Background'
+
+
+const buttonStyle = {
+    '&:hover':{
+        backgroundColor:'#dda800'
+    }, 
+    backgroundColor:'#FFC200',
+    color:'#000',
+    fontWeight:'600',
+    textTransform: 'none',
+    familyFont: ["Segoe UI", 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'],
+
+}
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
@@ -46,9 +58,9 @@ export const Banner = () => {
             <div className='container' >
                 <div className='hero'>
                     <span className='tagline'>Welcome</span>
-                    <h1>Hi, I'm a <code style={{ color: '#C7A338'}}className='wrap'>{text}</code></h1>
+                    <h1>Hi, I'm a <code style={{ color: '#FFC200'}}className='wrap'>{text}</code></h1>
                     <p>Driven Junior Web Developer looking for an organization where I can thrive in a team-oriented environment, develop a deeper understanding of new techniques and technologies, and deliver projects that exceed client expectations.</p>
-                    <Button sx={{ color:'#C7A338', borderColor:'black'}} onClick={() => console.log('connect')}>Let's connect</Button>
+                    <Button sx={buttonStyle} variant='contained' href="#contact">Let's connect</Button>
                 </div>
                 <div className='header-img'>
                     <img src={avatar} alt='header img' className='avatar'/>

@@ -1,3 +1,8 @@
+:root{
+    --primary: #003DFF;
+    --secondary: #FFC200;
+}
+
 .banner {
     background-color: #23153c;
     height: 100vh;
@@ -46,6 +51,10 @@
     .container .header-img img{
        display: none;
     } 
+
+    .hero h1 {
+        height: 75px;
+    }
 
     .banner {
         align-items: center;

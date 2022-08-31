@@ -7,7 +7,35 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import IconButton from '@mui/material/IconButton';
+import KeyboardDoubleArrowUpRoundedIcon from '@mui/icons-material/KeyboardDoubleArrowUpRounded';
 import './Navbar.css';
+
+const buttonStyles = {
+  
+  position:'fixed',
+  top: '20px',
+  right: '6vw',
+  color: '#fff',
+  backgroundColor: '#003DFF',
+  fontSize: '20px',
+  transition: 'all .2s ease-in-out',
+  opacity: '0',
+  textShadow:'0px 1px 0px #e1e2ed',
+  '@media (max-width: 400px)': {
+    '&.scroll': {
+      opacity: '1',
+      color: '#fff',
+      backgroundColor: '#003DFF',
+      fontSize: '20px',
+      transition: 'all .2s ease-in-out',
+      textShadow:'0px 1px 0px #e1e2ed'
+      }
+  }
+}
+
+const socialStyles = {
+    color: '#003DFF'
+}
 
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home')
@@ -28,9 +56,10 @@ export const NavBar = () => {
     }
 
   return (
-    <Navbar expand="lg" className={scrolled ? 'scrolled' : 'unscrolled'}>
-      <Container>
-        <div className='navbar-logo-nav'>
+    <Navbar expand="lg" className={scrolled ? 'scrolled' : ''}>
+      <Container id='home'>
+      <IconButton className={scrolled ? 'scroll' : ''} sx={buttonStyles} href='#home' aria-label='LinkedIn'><KeyboardDoubleArrowUpRoundedIcon/></IconButton>
+        <div className='navbar-logo-nav' >
             <Navbar.Brand href="#home">
                 <img src={Logo} alt='logo'/>
             </Navbar.Brand>
@@ -42,12 +71,12 @@ export const NavBar = () => {
             </Nav>
         </div>
           <span className='navbar-text'>
-            <div className='social-icons'>
-                <IconButton size="large" target="_blank" href='https://www.linkedin.com/in/frank-imbruglia-095581164/' color='primary' aria-label='LinkedIn'><LinkedInIcon/></IconButton>
-                <IconButton size="large" target="_blank" href='https://github.com/imbruglia100' color='primary' aria-label='Github'><GitHubIcon/></IconButton>
-                <IconButton size="large" target="_blank" href='https://www.instagram.com/imbruglia50/' color='primary' aria-label='Instagram'><InstagramIcon/></IconButton>
+            <div className='social-icons' >
+                <IconButton size="large" sx={socialStyles} target="_blank" href='https://www.linkedin.com/in/frank-imbruglia-095581164/' aria-label='LinkedIn'><LinkedInIcon/></IconButton>
+                <IconButton size="large" sx={socialStyles} target="_blank" href='https://github.com/imbruglia100' aria-label='Github'><GitHubIcon/></IconButton>
+                <IconButton size="large" sx={socialStyles} target="_blank" href='https://www.instagram.com/imbruglia50/' aria-label='Instagram'><InstagramIcon/></IconButton>
             </div>
-            <button className='contact' onClick={() => console.log('connect')}><span>Let's connect</span></button>
+            <button className='contact' href='#contact'><span>Let's connect</span></button>
           </span>
         
       </Container>

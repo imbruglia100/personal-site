@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Grid, TextField } from '@mui/material'
+import { Button, getInitColorSchemeScript, Grid, TextField } from '@mui/material'
 import './Contact.css'
 
 export const Contact = () => {
@@ -17,24 +17,45 @@ export const Contact = () => {
     }
 
     const styles = {
-        alignItems: 'center',
-        '& .MuiInputLabel-root': {
-            color: '#fff',
-        },
-        "& .MuiOutlinedInput-root":{
+        
+        '@media (max-width: 400px)': {
+            margin: '0 20px',
+            "& .MuiOutlinedInput-root":{
+            
                 "& > fieldset": {
-                        border: '1px solid #fff',
-                        width: '100%'
+                        border: '2px solid #000',
+                        
                     },
                
-                color: '#fff'
             }
+        },
+
+        alignItems: 'center',
+        '& .MuiInputLabel-root': {
+            color: '#000',
+            margin: '0 5px'
+        },
+
+        "& .MuiOutlinedInput-root":{
+            
+                "& > fieldset": {
+                        border: '2px solid #000',
+                        margin: '0 5px',
+                        backgroundColor: '#fff'
+                    },
+                
+                color: '#000'
+            },
+    
+            "& .Mui-focused": {
+                color: '#000'
+        },
     }
     
   return (
-    <section className='contact-section'>
+    <section className='contact-section' id='contact'>
         <div className='contact-container'>
-            <h1>Let's talk</h1>
+            <h1>Let's talk.</h1>
                 <form>
                     <Grid container flexDirection='column' sx={styles}>
                         <Grid item >
@@ -73,7 +94,7 @@ export const Contact = () => {
                             onChange={e => setEmail({message: e.target.value})}
                             />
     
-                        <Button onSubmit={handleSubmit}>{buttonText}</Button>
+                        <Button variant='contained' onSubmit={handleSubmit}>{buttonText}</Button>
                     </Grid>
                 </form>
         </div>

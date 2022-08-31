@@ -1,7 +1,7 @@
 import React from 'react'
 import './Card.css'
 
-export const Card = ({title, img, desc, url}) => {
+export const Card = ({title, img, url}) => {
   return (
     <div className='card'>
         <a href={url} target='_blank' rel='noreferrer' className='img-container'>

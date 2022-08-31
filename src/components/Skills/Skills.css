@@ -6,12 +6,12 @@
 }
 
 .skill-bx h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     align-self: center;
 }
 
 .skill-bx p {
-    align-self: center;
+    text-align: center;
     opacity: .7;
 }
 
@@ -30,4 +30,16 @@
 
 .item img {
     width: 16vw;
+}
+
+@media (max-width: 500px){
+    .item img {
+        width: 25vw;
+    }
+}
+
+@media (max-width: 392px){
+    .item img {
+        width: 40vw;
+    }
 }

@@ -22,7 +22,7 @@ export const Contact = () => {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode(email)
+            body: encode({"form-name": 'contact', ...email})
           })
             .then(() => setButtonText('Sent!'))
             .catch(error => alert(error));

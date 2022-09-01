@@ -2,7 +2,13 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import './Skills.css';
 import 'react-multi-carousel/lib/styles.css';
-import meter from '../../assets/images/meter1.svg'
+import git from '../../assets/images/1.svg'
+import javascript from '../../assets/images/2.svg'
+import node from '../../assets/images/3.svg'
+import react from '../../assets/images/4.svg'
+import cssHtml from '../../assets/images/5.svg'
+import design from '../../assets/images/6.svg'
+import marketing from '../../assets/images/7.svg'
 
 export const Skills = () => {
     const responsive = {
@@ -32,31 +38,31 @@ export const Skills = () => {
                 <p>The list of skills will continue to grow. Learning new tech is one of my top priorities.</p>
                 <Carousel responsive={responsive} infinite={true} className='skills-slider'>
                     <div className='item'>
-                        <img src={meter} alt='meter 90%'/>
+                        <img src={javascript} alt='meter 90%'/>
                         <h5>Javascript</h5>
                     </div>
                     <div className='item'>
-                        <img src={meter} alt='meter 90%'/>
+                        <img src={react} alt='meter 90%'/>
                         <h5>React.js</h5>
                     </div>
                     <div className='item'>
-                        <img src={meter} alt='meter 90%'/>
+                        <img src={design} alt='meter 90%'/>
                         <h5>Web Design</h5>
                     </div>
                     <div className='item'>
-                        <img src={meter} alt='meter 90%'/>
+                        <img src={cssHtml} alt='meter 90%'/>
                         <h5>CSS & HTML</h5>
                     </div>
                     <div className='item'>
-                        <img src={meter} alt='meter 90%'/>
+                        <img src={git} alt='meter 90%'/>
                         <h5>Git</h5>
                     </div>
                     <div className='item'>
-                        <img src={meter} alt='meter 90%'/>
+                        <img src={node} alt='meter 90%'/>
                         <h5>Node.js</h5>
                     </div>
                     <div className='item'>
-                        <img src={meter} alt='meter 90%'/>
+                        <img src={marketing} alt='meter 90%'/>
                         <h5>Digital Marketing</h5>
                     </div>
                 </Carousel>

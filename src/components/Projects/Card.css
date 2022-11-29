@@ -6,12 +6,20 @@
     align-items: center;
     padding: 20px 0;
     margin: 0 10px;
+    
 }
 
 .card .img-container img {
     width: 30vw;
     border-radius: 10px;
+    border: 5px solid orange;
+    transition: all 0.3s ease-out;
 }
+
+.card .img-container img:hover {
+    scale: 1.1;
+}
+
 
 
 .card p {

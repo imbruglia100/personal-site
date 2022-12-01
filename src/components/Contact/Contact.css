@@ -43,3 +43,19 @@
     width: 30vw;
     height: 200px;
 }
+
+#submitButton {
+   width: 9em;
+   height: 3em;
+   border: 3px solid black;
+   border-radius: 20px;
+   background-color: transparent;
+   font-weight: 600;
+   font-size: 1.1em;
+   margin-top: 4% ;
+   transition: all 200ms ease-in-out;
+}
+
+#submitButton:hover {
+    font-size: 1.3em;
+}

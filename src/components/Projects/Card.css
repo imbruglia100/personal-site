@@ -2,33 +2,94 @@
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
-    margin: 0 10px;
-    
+    padding: 10px;
+    margin: 10px ;
+    background-color: hsl(0, 0%, 25%);
+    border-radius: 20px;
+    border: 2px solid black;
+    height: fit-content;
+    transition: all 0.3s ease-out;
 }
 
 .card .img-container img {
     width: 30vw;
     border-radius: 10px;
-    border: 5px solid orange;
-    transition: all 0.3s ease-out;
+    border: 2px solid rgb(0, 0, 0); 
 }
 
-.card .img-container img:hover {
-    scale: 1.1;
+.card:hover {
+    background-color: hwb(0 30% 75%);
 }
 
+.projectDesc {
+    word-wrap: break-word;
+}
 
+#chips {
+    display: flex;
+    opacity: 100;
+}
 
-.card p {
-    text-align: center;
+#chip {
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px 5px 0 0;
+    font-size: smaller;
+    color: black;
+    border: 1px solid black;
+    font-weight: 600;
+}
+#chip:hover{
+    box-shadow: black;
+}
+
+.blue{
+    background-color: rgb(56, 56, 212);
+    
+}
+
+.orange {
+    background-color: rgb(220, 160, 48);
+}
+
+.green {
+    background-color: rgb(48, 216, 48);
+}
+
+.yellow{
+    background-color: rgb(212, 212, 51);
+}
+
+.red {
+    background-color: rgb(215, 64, 64);
+}
+
+.black{
+    background-color: rgb(74, 228, 255);
+}
+
+#cardContent {
+    width:30vw;
+}
+
+#cardContent > p {
+    margin-top: 3px;
+}
+.goToBtn {
+    background-color: #ffa500;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 20px;
+    margin: 10px 0 0 0;
+    width: 100%;
 }
 
 @media (max-width: 775px){
     .card .img-container img {
         width: 40vw;
+    }
+    #cardContent {
+    width:80vw;
     }
 }
 

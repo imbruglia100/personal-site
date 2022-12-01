@@ -6,7 +6,7 @@ import './Contact.css'
 export const Contact = () => {
 
     const [email, setEmail] = useState({})
-    const [buttonText, setButtonText] = useState('Submit') 
+    const [buttonText, setButtonText] = useState('Send') 
 
     const encode = (data) => {
         return Object.keys(data)
@@ -71,7 +71,7 @@ export const Contact = () => {
   return (
     <section className='contact-section' id='contact'>
         <div className='contact-container'>
-            <h1>Let's talk.</h1>
+            <h1>Let's talk</h1>
                 <form name="contact" onSubmit={handleSubmit} method="POST">
                     <Grid container flexDirection='column' sx={styles}>
                         <Grid item >
@@ -113,7 +113,7 @@ export const Contact = () => {
                             onChange={handleChange}
                             />
     
-                        <Button variant='contained' type="submit" onSubmit={handleSubmit}>{buttonText}</Button>
+                        <button id="submitButton" type="submit" onSubmit={handleSubmit}>{buttonText}</button>
                     </Grid>
                 </form>
         </div>

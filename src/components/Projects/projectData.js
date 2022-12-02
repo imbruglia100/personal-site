@@ -15,7 +15,7 @@ export const projects = [
     title: "Crypto Media",
     img: cryptoImg,
     url: "https://crypto-media.netlify.app",
-    desc: "Crypto media shares up to date data of all coins, exhanges, and news.",
+    desc: "Crypto media shares up to date data of all coins, exchanges, and news.",
     chips: ["javascript", "css", "react"],
   },
   {

@@ -33,6 +33,11 @@ const buttonStyles = {
   }
 }
 
+const handleClick = () => {
+  const contact = document.getElementById("contact")
+  contact.scrollIntoView();
+}
+
 const socialStyles = {
     color: '#003DFF'
 }
@@ -76,7 +81,7 @@ export const NavBar = () => {
                 <IconButton size="large" sx={socialStyles} target="_blank" href='https://github.com/imbruglia100' aria-label='Github'><GitHubIcon/></IconButton>
                 <IconButton size="large" sx={socialStyles} target="_blank" href='https://www.instagram.com/imbruglia50/' aria-label='Instagram'><InstagramIcon/></IconButton>
             </div>
-            <button className='contact' href='#contact'><span>Let's connect</span></button>
+            <button className='contact' onClick={handleClick}><span>Let's connect</span></button>
           </span>
         
       </Container>

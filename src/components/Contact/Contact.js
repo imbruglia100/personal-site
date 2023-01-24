@@ -10,6 +10,10 @@ import "./Contact.css";
 
 export const Contact = () => {
 
+
+  const handleCall = () => {
+    window.location.href = "tel:+17815680010";
+  }
   const socialStyles = {
    fontSize: '35px',
    color: '#000000',
@@ -22,7 +26,6 @@ export const Contact = () => {
         <div className="contactButtons">
           <IconButton
             size="large"
-            target="_blank"
             href="mailto:imbruglia100@gmail.com?subject=Looking%20for%20a%20job%3F"
             aria-label="Email"
           >
@@ -31,8 +34,7 @@ export const Contact = () => {
           {window.screen.width < 712 && (
             <IconButton
               size="large"
-              target="_blank"
-              onClick={(window.location.href = "tel:12345")}
+              onClick={handleCall}
               aria-label="Email"
             >
               <PhoneIcon sx={socialStyles} />

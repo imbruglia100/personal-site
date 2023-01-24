@@ -27,7 +27,7 @@ export const projects = [
     chips: ["javascript", "css", "react"],
   },
   {
-    title: "Measter of Keys",
+    title: "Master of Keys",
     img: speedtyper,
     url: "https://storied-panda-9cbad4.netlify.app",
     desc: "Speed typing game made to improve your speed and accuracy when typing.",

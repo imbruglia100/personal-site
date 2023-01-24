@@ -1,12 +1,20 @@
 /*Default */
+@font-face {
+    font-family: 'poppins';
+    src: local(''),url('./assets/fonts/poppins.regular.ttf');
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'poppins';
 }
 
-html {
+html {  
+    margin: 0;
+    font-family: Courier, monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
     scroll-padding-top: 75px;
     overflow-x: hidden;
@@ -18,7 +26,6 @@ body {
     position: relative;
     background-color: #07192F !important;
     color: #fff;
-    font-family: 'Questrial';
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -26,7 +26,10 @@ export const Card = ({ title, img, url, chips, desc }) => {
           color = 'black'
           break;
       }
-      return <p id="chip" className={color}>{ele}</p>;
+      return {
+        color,
+        ele
+      }
     });
     return chips;
   };
@@ -35,17 +38,25 @@ export const Card = ({ title, img, url, chips, desc }) => {
 
   return (
     <div className="card">
-      <div className="img-container">
-        <img src={img} alt={title} />
-      </div>
       <main id="cardContent">
+        <div className="img-container">
+          <img src={img} alt={title} />
+        </div>
         <h2>{title}</h2>
-        <p id="chips">{retChips.map((ele) => ele)}</p>
+        <div id="chips">
+          {retChips.map((ele, i) => (
+            <p id="chip" key={i} className={ele.color}>
+              {ele.ele}
+            </p>
+          ))}
+        </div>
         <p id="projectDesc">{desc}</p>
-        <a href={url} target="_blank" rel="noreferrer" className="btnHolder">
-          <button className="goToBtn">Check it out</button>
-        </a>
       </main>
+      <div className="btnHolder">
+        <a href={url} target="_blank" rel="noreferrer" className="goToBtn">
+          Check it out
+        </a>
+      </div>
     </div>
   );
 };

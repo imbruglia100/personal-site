@@ -32,7 +32,7 @@ export const Contact = () => {
             <IconButton
               size="large"
               target="_blank"
-              onClick={() => console.log(window.screen.width)} //window.location.href='tel:12345'}
+              onClick={(window.location.href = "tel:12345")}
               aria-label="Email"
             >
               <PhoneIcon sx={socialStyles} />

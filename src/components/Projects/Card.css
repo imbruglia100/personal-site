@@ -110,10 +110,10 @@
     #cardContent {
     width:80vw;
     }
-}
-
-@media (max-width: 775px){
     .card .img-container img {
         width: 80vw;
+    }
+    .card {
+        height: fit-content;
     }
 }

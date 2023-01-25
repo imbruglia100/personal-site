@@ -15,9 +15,15 @@ export const Contact = () => {
     window.location.href = "tel:+17815680010";
   }
   const socialStyles = {
-   fontSize: '35px',
-   color: '#000000',
+    icon:{
+    fontSize: '35px',
+    color: '#000000'
+  },
+    all: {
+      margin: '0 5px'
+    }
   };
+
 
   return (
     <section className="contact-section" id="contact">
@@ -28,16 +34,18 @@ export const Contact = () => {
             size="large"
             href="mailto:imbruglia100@gmail.com?subject=Looking%20for%20a%20job%3F"
             aria-label="Email"
+            sx={socialStyles.all}
           >
-            <EmailIcon sx={socialStyles} />
+            <EmailIcon sx={socialStyles.icon} />
           </IconButton>
           {window.screen.width < 712 && (
             <IconButton
               size="large"
               onClick={handleCall}
+              sx={socialStyles.all}
               aria-label="Email"
             >
-              <PhoneIcon sx={socialStyles} />
+              <PhoneIcon sx={socialStyles.icon} />
             </IconButton>
           )}
 
@@ -45,25 +53,28 @@ export const Contact = () => {
             size="large"
             target="_blank"
             href="https://www.linkedin.com/in/frank-imbruglia-095581164/"
+            sx={socialStyles.all}
             aria-label="LinkedIn"
           >
-            <LinkedInIcon sx={socialStyles} />
+            <LinkedInIcon sx={socialStyles.icon} />
           </IconButton>
           <IconButton
             size="large"
             target="_blank"
             href="https://github.com/imbruglia100"
+            sx={socialStyles.all}
             aria-label="Github"
           >
-            <GitHubIcon sx={socialStyles} />
+            <GitHubIcon sx={socialStyles.icon} />
           </IconButton>
           <IconButton
             size="large"
             target="_blank"
             href="https://www.instagram.com/imbruglia50/"
+            sx={socialStyles.all}
             aria-label="Instagram"
           >
-            <InstagramIcon sx={socialStyles} />
+            <InstagramIcon sx={socialStyles.icon} />
           </IconButton>
         </div>
       </div>

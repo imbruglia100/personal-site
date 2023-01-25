@@ -10,7 +10,7 @@ export const projects = [
     img: travelImg,
     desc: "Dynamically find hotels, restaurants, and attractions around your location. Scroll around on the map to change listings and find new places.",
     url: "https://travel-advisor-fji.netlify.app",
-    chips: ["javascript", "css", "html", "react"],
+    chips: ["javascript", "css", "html", "react", "rapid-api"],
   },
   {
     title: "Recipe N' Go",

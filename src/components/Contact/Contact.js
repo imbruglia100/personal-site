@@ -43,7 +43,7 @@ export const Contact = () => {
               size="large"
               onClick={handleCall}
               sx={socialStyles.all}
-              aria-label="Email"
+              aria-label="telephone"
             >
               <PhoneIcon sx={socialStyles.icon} />
             </IconButton>

@@ -3,6 +3,7 @@
     font-family: 'poppins';
     src: local(''),url('./assets/fonts/poppins.regular.ttf');
 }
+
 * {
     margin: 0;
     padding: 0;

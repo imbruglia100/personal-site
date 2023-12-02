@@ -26,8 +26,9 @@
 
 .hero p {
     max-width: 500px;
-    font-size: 1.1em;
+    font-size: 1.2em;
     margin: 20px 0;
+    line-height: 2em;
 }
 
 .hero .button {
@@ -51,10 +52,18 @@
 @media (max-width: 712px) {
     .container .header-img img{
        display: none;
-    } 
+    }
+
+    .banner .container {
+        top: 25vh;
+    }
 
     .hero h1 {
         height: 80px;
+    }
+
+    .hero p {
+        line-height: 1.4em;
     }
 
     .banner {

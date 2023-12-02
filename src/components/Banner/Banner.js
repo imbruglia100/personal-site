@@ -8,12 +8,13 @@ import {Background} from './Background'
 const buttonStyle = {
     '&:hover':{
         backgroundColor:'#dda800'
-    }, 
+    },
     backgroundColor:'#FFC200',
     color:'#000',
     fontWeight:'600',
     textTransform: 'none',
     familyFont: ["Segoe UI", 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'],
+    fontSize: '1.2em'
 
 }
 

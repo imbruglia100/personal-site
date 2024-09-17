@@ -1,11 +1,12 @@
+/** @format */
+
 import React from "react";
 import "./Card.css";
 
 export const Card = ({ title, img, url, chips, desc }) => {
-
   const mmmChips = (arr) => {
     const chips = arr.map((ele) => {
-      let color = 'black'
+      let color = "black";
       switch (ele.toLowerCase()) {
         case "javascript":
           color = "green";
@@ -19,17 +20,26 @@ export const Card = ({ title, img, url, chips, desc }) => {
         case "react":
           color = "red";
           break;
-        case "tailwind":
+        case "python":
           color = "blue";
           break;
+        case "flask":
+          color = "purple";
+          break;
+        case "sqlalchemy":
+          color = "red";
+          break;
+        case "sequelize":
+          color = "purple";
+          break;
         default:
-          color = 'black'
+          color = "black";
           break;
       }
       return {
         color,
-        ele
-      }
+        ele,
+      };
     });
     return chips;
   };
@@ -37,23 +47,23 @@ export const Card = ({ title, img, url, chips, desc }) => {
   const retChips = mmmChips(chips);
 
   return (
-    <div className="card">
-      <main id="cardContent">
-        <div className="img-container">
+    <div className='card'>
+      <main id='cardContent'>
+        <div className='img-container'>
           <img src={img} alt={title} />
         </div>
         <h2>{title}</h2>
-        <div id="chips">
+        <div id='chips'>
           {retChips.map((ele, i) => (
-            <p id="chip" key={i} className={ele.color}>
+            <p id='chip' key={i} className={ele.color}>
               {ele.ele}
             </p>
           ))}
         </div>
-        <p id="projectDesc">{desc}</p>
+        <p id='projectDesc'>{desc}</p>
       </main>
-      <div className="btnHolder">
-        <a href={url} target="_blank" rel="noreferrer" className="goToBtn">
+      <div className='btnHolder'>
+        <a href={url} target='_blank' rel='noreferrer' className='goToBtn'>
           Check it out
         </a>
       </div>

@@ -8,10 +8,11 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import IconButton from '@mui/material/IconButton';
 import KeyboardDoubleArrowUpRoundedIcon from '@mui/icons-material/KeyboardDoubleArrowUpRounded';
+import resume from '../../assets/images/resume.pdf'
 import './Navbar.css';
 
 const buttonStyles = {
-  
+
   position:'fixed',
   top: '20px',
   right: '6vw',
@@ -45,7 +46,7 @@ const socialStyles = {
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home')
     const [scrolled, setScrolled] = useState(false)
-    
+
     useEffect( () => {
         const onScroll = () => {
             setScrolled(window.scrollY > 0 ? true : false)
@@ -68,7 +69,7 @@ export const NavBar = () => {
             <Navbar.Brand href="#home">
                 <img src={Logo} alt='logo'/>
             </Navbar.Brand>
-            
+
             <Nav className="me-auto">
                 <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
                 <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
@@ -81,9 +82,10 @@ export const NavBar = () => {
                 <IconButton size="large" sx={socialStyles} target="_blank" href='https://github.com/imbruglia100' aria-label='Github'><GitHubIcon/></IconButton>
                 <IconButton size="large" sx={socialStyles} target="_blank" href='https://www.instagram.com/imbruglia50/' aria-label='Instagram'><InstagramIcon/></IconButton>
             </div>
+            <a href={resume} id='resume' target='_blank'>Resume</a>
             <button className='contact' onClick={handleClick}><span>Let's connect</span></button>
           </span>
-        
+
       </Container>
     </Navbar>
   );

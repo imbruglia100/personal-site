@@ -3,6 +3,7 @@
     --secondary: #FFC200;
 }
 
+
 .banner {
     background-color: #23153c;
     height: 100vh;
@@ -22,7 +23,23 @@
 
 .container .header-img img {
      animation: updown 5s linear infinite;
+     overflow: hidden;
+     border-radius: 100%;
+     width: 400px;
+     height: 400px;
+     object-fit: cover;
+     object-position: center;
+     border: 2px solid var(--secondary);
   }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero h1{
+    height: fit-content;
+}
 
 .hero p {
     max-width: 500px;
@@ -58,8 +75,8 @@
         top: 25vh;
     }
 
-    .hero h1 {
-        height: 80px;
+    .hero {
+        width: 100%;
     }
 
     .hero p {

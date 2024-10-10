@@ -1,7 +1,7 @@
 import { Button } from '@mui/material';
 import './Banner.css';
 import { useEffect, useState } from 'react';
-import avatar from "../../assets/images/avatar.svg"
+import proPic from "../../assets/images/proPic.jpg"
 import {Background} from './Background'
 
 
@@ -21,10 +21,10 @@ const buttonStyle = {
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ['Front End Engineer', 'UI/UX Designer', 'React Specialist']
+    const toRotate = ['Software Engineer.', 'Jiu Jitsu Black Belt.', 'V3 Rock Climber.', 'Cat Dad.', 'Gamer.']
     const [text, setText] = useState('')
     const [delta, setDelta] = useState(100)
-    const period = 2000;
+    const period = 1400;
 
     useEffect( () => {
         let ticker = setInterval( () => {
@@ -41,7 +41,7 @@ export const Banner = () => {
         setText(updatedText)
 
         if (isDeleting){
-            setDelta(prevDelta => prevDelta / 2)
+            setDelta(prevDelta => prevDelta / 3)
         }
 
         if(!isDeleting && updatedText === fullText){
@@ -54,21 +54,23 @@ export const Banner = () => {
         }
     }
     return (
-        <div id='home'>
-        <Background className='banner'>
+
+        <Background id="home"className='banner'>
             <div className='container' >
                 <div className='hero'>
-                    <span className='tagline'>Welcome</span>
-                    <h1>Hi, I'm a <code style={{ color: '#FFC200'}}className='wrap'>{text}</code></h1>
+                    <span className='tagline'>Hi,</span>
+                    <h1>My name is <span style={{ color: '#FFC200'}}>Frank Imbruglia.</span></h1>
+
+                    <h2>I am a <code style={{ color: '#FFC200'}}className='wrap'>{text}</code></h2>
 
                     <p>Driven Web Developer looking for an organization where I can thrive in a team-oriented environment, develop a deeper understanding of new techniques and technologies, and deliver projects that exceed client expectations.</p>
                     <Button sx={buttonStyle} size='large' variant='contained' href="#contact">Let's connect</Button>
                 </div>
                 <div className='header-img'>
-                    <img src={avatar} alt='header img' className='avatar'/>
+                    <img src={proPic} alt='header img' className='avatar'/>
                 </div>
             </div>
         </Background>
-        </div>
+
     );
 }
